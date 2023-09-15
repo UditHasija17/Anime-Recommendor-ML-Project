@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Anime Recommendor</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="center-container">
+        <h1>Your Anime Recommendor</h1>
+        <form method="post">
+            <label for="anime_type">Anime Type:</label>
+            <input type="text" name="anime_type" id="anime_type" list="anime_type_list" required>
+            <datalist id="anime_type_list">
+                <option value="TV">
+                <option value="Movie">
+                <option value="OVA">
+                <option value="Special">
+                <!-- Add more options here -->
+            </datalist>
+
+            <label for="anime_name">Anime Name:</label>
+            <input type="text" name="anime_name" id="anime_name_input" list="anime_names" required>
+            <datalist id="anime_names">
+                {% for name in anime_names %}
+                <option value="{{ name }}">
+                {% endfor %}
+            </datalist>
+
+            <label for="num_recommendations">Number of Recommendations:</label>
+            <input type="number" name="num_recommendations" required><br>
+            
+            <input type="submit" value="Get Recommendations">
+        </form>
+    </div>
+</body>
+</html>

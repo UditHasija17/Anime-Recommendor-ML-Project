@@ -1,0 +1,75 @@
+/* results_style.css */
+
+/* Reset some default browser styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    background-image: url("/static/images/anime1111.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.center-container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #eee;
+    margin-bottom: 20px;
+    text-align: center;
+    -webkit-text-stroke: .4px black;
+    text-shadow: 2px 2px 0 #000;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #eee;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    border-radius: .7em;
+}
+
+li h2 {
+    font-size: 24px;
+    color: #007bff; /* Blue color for anime names */
+    margin-bottom: 10px;
+}
+
+li .synopsis {
+    font-size: 16px;
+    line-height: 1.4;
+    color: black; /* Black color for synopses */
+}
+
+li .episodes {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #ff6347; /* Tomato color for episodes */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    .center-container {
+        padding: 10px;
+    }
+}

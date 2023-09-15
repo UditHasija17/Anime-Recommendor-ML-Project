@@ -1,0 +1,79 @@
+/* index_style.css */
+
+/* Reset some default browser styles */
+
+body, h1, form, input {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    background-image: url("/static/images/anime1111.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* Center align the h1 heading */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* Center align the form */
+form {
+    text-align: center;
+}
+
+/* Style the form labels */
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Style the form inputs */
+input[type="text"], input[type="number"], input[type="submit"] {
+    display: block;
+    margin: 5px auto;
+    width: 200px;
+    padding: 10px;
+}
+
+/* Style the datalist dropdown */
+datalist {
+    display: block;
+    margin: 5px auto;
+    width: 200px;
+    padding: 5px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style the submit button on hover */
+input[type="submit"]:hover {
+    background-color: #45A049;
+}
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+}

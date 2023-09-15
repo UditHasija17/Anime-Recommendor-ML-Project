@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anime Recommendations Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_r.css') }}">
+</head>
+<body>
+    <div class="center-container">
+        <h1>Anime Recommendations</h1>
+        <ul>
+            {% for i in range(recommendations['name']|length) %}
+            <li>
+                <h2>{{ recommendations['name'][i] }}</h2>
+                <p>Episodes: {{ recommendations['episodes'][i] }}</p>
+                <!-- <p>Same Users Liked % : {{ recommendations['match'][i] }}</p>-->
+                <p>SYNOPSIS:- {{ recommendations['synopsis'][i] }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
