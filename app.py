@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 import pandas as pd
-anime_data = pd.read_csv('C:\\Users\\udit hasija\\Documents\\Project Anime\\data\\anime.csv')
+anime_data = pd.read_csv('data\\anime.csv')
 anilist = anime_data['name']
 def get_anime_recommendations(anime_type, anime_name, num_recommendations):
     import os
@@ -14,8 +14,8 @@ def get_anime_recommendations(anime_type, anime_name, num_recommendations):
     warnings.filterwarnings("ignore")
 
     from sklearn.metrics.pairwise import cosine_similarity
-    anime_data = pd.read_csv('C:\\Users\\udit hasija\\Documents\\Project Anime\\data\\anime.csv')
-    rating_data = pd.read_csv('C:\\Users\\udit hasija\\Documents\\Project Anime\\data\\rating.csv')
+    anime_data = pd.read_csv('data\\anime.csv')
+    rating_data = pd.read_csv('rating.csv')
     anime_data = anime_data[~np.isnan(anime_data['rating'])]
     anime_data['genre'] = anime_data['genre'].fillna(anime_data['genre'].dropna().mode().values[0])
     anime_data['type'] = anime_data['type'].fillna(anime_data['type'].dropna().mode().values[0])
@@ -49,7 +49,7 @@ def get_anime_recommendations(anime_type, anime_name, num_recommendations):
     return recommendations
 
 app = Flask(__name__)
-app._static_folder = 'C:\\Users\\udit hasija\\Documents\\Project Anime\\static'
+app._static_folder = 'static'
 @app.route('/', methods=['GET', 'POST'])
 
 def index():
